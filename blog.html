@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Wiggy Baking</title>
+  <meta name="description" content="Read the latest stories, recipes and news from the Wiggy Baking team.">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+
+<canvas id="sprinkle-canvas"></canvas>
+
+<!-- NAV -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo" aria-label="Wiggy Baking Home">
+      <img src="assets/logo.jpg" alt="Wiggy Baking Logo">
+      <span class="nav-logo-text">Wiggy Baking</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+      <li><a href="recipes.html">Recipes</a></li><li><a href="blog.html">Blog</a></li>
+      <li><a href="bookings.html">Bookings</a></li><li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<nav class="nav-mobile" id="nav-mobile">
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="recipes.html">Recipes</a>
+  <a href="blog.html">Blog</a><a href="bookings.html">Bookings</a><a href="contact.html">Contact Us</a>
+</nav>
+
+<!-- HERO -->
+<header class="page-hero" aria-label="Blog hero">
+  <div class="page-hero-bg"></div>
+  <h1 class="page-hero-title reveal">The Wiggy Blog</h1>
+  <p class="page-hero-subtitle reveal reveal-delay-1">Stories, spotlights & sweet inspiration</p>
+</header>
+
+<!-- BLOG LAYOUT -->
+<div class="blog-layout">
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- Search -->
+    <div class="blog-search" role="search">
+      <input type="search" id="blog-search-input" placeholder="Search stories…" aria-label="Search blog posts">
+      <button id="blog-search-btn" aria-label="Search">🔍</button>
+    </div>
+
+    <!-- Categories -->
+    <div class="blog-categories" role="navigation" aria-label="Blog categories">
+      <button class="cat-btn active" data-cat="all">All Posts</button>
+      <button class="cat-btn" data-cat="Customer Spotlight">Customer Spotlight</button>
+      <button class="cat-btn" data-cat="Team Spotlight">Team Spotlight</button>
+      <button class="cat-btn" data-cat="Kitchen Tales">Kitchen Tales</button>
+    </div>
+
+    <!-- Featured post (rendered by blog.js) -->
+    <div id="blog-featured"></div>
+
+    <!-- Article pair (rendered by blog.js) -->
+    <div id="blog-pair" class="blog-pair"></div>
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="blog-sidebar" aria-label="Blog sidebar">
+
+    <div class="sidebar-widget">
+      <h2 class="sidebar-widget-title">Recent Posts</h2>
+      <div class="recent-post" onclick="openModal('customer')">
+        <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=120&q=80" alt="Margaret" class="recent-post-thumb">
+        <div>
+          <div class="recent-post-title">Customer of the Month: Margaret's Sweet Celebrations</div>
+          <div class="recent-post-date">August 10, 2026</div>
+        </div>
+      </div>
+      <div class="recent-post" onclick="openModal('employee')">
+        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=120&q=80" alt="James" class="recent-post-thumb">
+        <div>
+          <div class="recent-post-title">Baker of the Month: James and the Midnight Macaron</div>
+          <div class="recent-post-date">August 5, 2026</div>
+        </div>
+      </div>
+      <div class="recent-post" onclick="openModal('mishap')">
+        <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=120&q=80" alt="Ganache" class="recent-post-thumb">
+        <div>
+          <div class="recent-post-title">The Great Ganache Incident</div>
+          <div class="recent-post-date">July 28, 2026</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-widget">
+      <h2 class="sidebar-widget-title">Categories</h2>
+      <ul style="display:flex;flex-direction:column;gap:0.5rem;">
+        <li style="display:flex;justify-content:space-between;align-items:center;padding:0.4rem 0;border-bottom:1px solid var(--cream-dark);">
+          <span>Customer Spotlight</span>
+          <span style="background:var(--pink-light);color:var(--red);padding:0.1rem 0.6rem;border-radius:99px;font-size:0.8rem;font-weight:700;">1</span>
+        </li>
+        <li style="display:flex;justify-content:space-between;align-items:center;padding:0.4rem 0;border-bottom:1px solid var(--cream-dark);">
+          <span>Team Spotlight</span>
+          <span style="background:var(--pink-light);color:var(--red);padding:0.1rem 0.6rem;border-radius:99px;font-size:0.8rem;font-weight:700;">1</span>
+        </li>
+        <li style="display:flex;justify-content:space-between;align-items:center;padding:0.4rem 0;">
+          <span>Kitchen Tales</span>
+          <span style="background:var(--pink-light);color:var(--red);padding:0.1rem 0.6rem;border-radius:99px;font-size:0.8rem;font-weight:700;">1</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="sidebar-widget" style="background: linear-gradient(135deg, var(--red) 0%, #b30000 100%); color: var(--cream);">
+      <h2 class="sidebar-widget-title" style="color:var(--pink);border-color:rgba(251,181,191,0.3);">🎂 Ready to Order?</h2>
+      <p style="font-size:0.9rem;opacity:0.9;margin-bottom:1rem;">Book your bespoke cake or dessert table for your next celebration.</p>
+      <a href="bookings.html" class="btn-primary" style="background:var(--cream);color:var(--red);width:100%;justify-content:center;">Book Now</a>
+    </div>
+
+  </aside>
+</div>
+
+<!-- READ MORE MODAL -->
+<div class="blog-modal-overlay" id="blog-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="blog-modal">
+    <button class="blog-modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+    <h2 class="blog-modal-title" id="modal-title"></h2>
+    <div class="blog-modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="nav-logo-text">Wiggy Baking</span>
+      <p>Handcrafted desserts made with love for every occasion worth celebrating.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">📸</a><a href="#" aria-label="Facebook">📘</a>
+        <a href="#" aria-label="TikTok">🎵</a><a href="#" aria-label="Pinterest">📌</a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="recipes.html">Recipes</a></li><li><a href="bookings.html">Bookings</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="#">📍 123 Baker Street, London</a></li><li><a href="tel:+441234567890">📞 +44 123 456 7890</a></li><li><a href="mailto:hello@wiggybaking.co.uk">✉️ hello@wiggybaking.co.uk</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© <span id="footer-year"></span> Wiggy Baking. All rights reserved.</p></div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/blog.js"></script>
+</body>
+</html>

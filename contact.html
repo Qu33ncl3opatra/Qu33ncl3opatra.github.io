@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Wiggy Baking</title>
+  <meta name="description" content="Get in touch with Wiggy Baking. We'd love to hear from you about your next sweet celebration.">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/bookings.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+<canvas id="sprinkle-canvas"></canvas>
+
+<!-- NAV -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo" aria-label="Wiggy Baking Home">
+      <img src="assets/logo.jpg" alt="Wiggy Baking Logo">
+      <span class="nav-logo-text">Wiggy Baking</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+      <li><a href="recipes.html">Recipes</a></li><li><a href="blog.html">Blog</a></li>
+      <li><a href="bookings.html">Bookings</a></li><li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<nav class="nav-mobile" id="nav-mobile">
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="recipes.html">Recipes</a>
+  <a href="blog.html">Blog</a><a href="bookings.html">Bookings</a><a href="contact.html">Contact Us</a>
+</nav>
+
+<!-- HERO -->
+<header class="page-hero" aria-label="Contact hero">
+  <div class="page-hero-bg"></div>
+  <h1 class="page-hero-title reveal">Get in Touch</h1>
+  <p class="page-hero-subtitle reveal reveal-delay-1">We'd love to hear from you — let's create something sweet together</p>
+</header>
+
+<!-- DECORATIVE BAKERY ILLUSTRATION -->
+<div class="bakery-illustration reveal">
+  <div class="illustration-card">
+    <!-- Inline SVG: whisk + mixing bowl illustration -->
+    <svg viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- Bowl -->
+      <ellipse cx="200" cy="140" rx="100" ry="30" fill="#FBB5BF" opacity="0.4"/>
+      <path d="M100 100 Q100 160 200 165 Q300 160 300 100" fill="#FBB5BF" stroke="#910000" stroke-width="3" fill-opacity="0.6"/>
+      <path d="M100 100 Q200 90 300 100" fill="none" stroke="#910000" stroke-width="3"/>
+      <!-- Bowl contents / batter ripple -->
+      <ellipse cx="200" cy="100" rx="90" ry="15" fill="#F8F6EA" opacity="0.7"/>
+      <path d="M120 97 Q160 105 200 97 Q240 89 280 97" fill="none" stroke="#FBB5BF" stroke-width="2" opacity="0.8"/>
+      <!-- Whisk handle (left) -->
+      <line x1="130" y1="80" x2="80" y2="20" stroke="#910000" stroke-width="5" stroke-linecap="round"/>
+      <!-- Whisk wires -->
+      <path d="M80 20 Q95 45 110 70 Q120 85 130 80" fill="none" stroke="#910000" stroke-width="2.5"/>
+      <path d="M80 20 Q100 40 115 65 Q125 80 130 80" fill="none" stroke="#910000" stroke-width="2"/>
+      <path d="M80 20 Q105 42 118 60 Q128 75 130 80" fill="none" stroke="#910000" stroke-width="1.5" opacity="0.7"/>
+      <!-- Wooden spoon (right) -->
+      <line x1="270" y1="80" x2="330" y2="15" stroke="#8B4513" stroke-width="6" stroke-linecap="round"/>
+      <ellipse cx="330" cy="13" rx="14" ry="10" fill="#CD853F" stroke="#8B4513" stroke-width="2" transform="rotate(-40 330 13)"/>
+      <!-- Star sprinkles -->
+      <text x="50" y="60" font-size="18" opacity="0.5">✨</text>
+      <text x="330" y="70" font-size="14" opacity="0.5">🌟</text>
+      <text x="185" y="50" font-size="12" opacity="0.4">⭐</text>
+      <!-- Flour puffs -->
+      <circle cx="160" cy="75" r="8" fill="#F8F6EA" opacity="0.6"/>
+      <circle cx="240" cy="72" r="6" fill="#F8F6EA" opacity="0.5"/>
+      <circle cx="200" cy="68" r="10" fill="#F8F6EA" opacity="0.4"/>
+    </svg>
+    <h3>Visit Our Bakery</h3>
+    <p>Open Monday to Saturday · 123 Baker Street, London · Just 2 minutes from the tube</p>
+  </div>
+</div>
+
+<!-- CONTACT LAYOUT -->
+<div class="contact-layout">
+
+  <!-- CONTACT FORM -->
+  <div class="contact-form-wrap reveal">
+    <h2 class="contact-form-title">Send Us a Message</h2>
+    <p class="contact-form-sub">We respond to all enquiries within one business day.</p>
+    <form id="contact-form" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="contact-name">Your Name *</label>
+          <input type="text" id="contact-name" name="name" required placeholder="Jane Smith">
+        </div>
+        <div class="form-group">
+          <label for="contact-email">Email Address *</label>
+          <input type="email" id="contact-email" name="email" required placeholder="jane@example.com">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="contact-subject">Subject</label>
+        <input type="text" id="contact-subject" name="subject" placeholder="e.g. Wedding cake enquiry">
+      </div>
+      <div class="form-group">
+        <label for="contact-message">Message *</label>
+        <textarea id="contact-message" name="message" required placeholder="Tell us about your enquiry…" style="min-height:140px;"></textarea>
+      </div>
+      <button type="submit" class="btn-primary" id="contact-submit-btn" style="width:100%;justify-content:center;">
+        ✉️ Send Message
+      </button>
+    </form>
+    <div class="contact-success" role="alert">🎉 Message sent! We'll be in touch very soon.</div>
+  </div>
+
+  <!-- INFO PANEL -->
+  <div class="contact-info-panel reveal reveal-right">
+
+    <div class="contact-info-card">
+      <div class="contact-info-icon">📍</div>
+      <div class="contact-info-label">Our Address</div>
+      <div class="contact-info-value">123 Baker Street<br>London, W1U 6TY<br>United Kingdom</div>
+    </div>
+
+    <div class="contact-info-card">
+      <div class="contact-info-icon">📞</div>
+      <div class="contact-info-label">Phone</div>
+      <div class="contact-info-value"><a href="tel:+441234567890" style="color:inherit;">+44 123 456 7890</a></div>
+    </div>
+
+    <div class="contact-info-card">
+      <div class="contact-info-icon">✉️</div>
+      <div class="contact-info-label">Email</div>
+      <div class="contact-info-value"><a href="mailto:hello@wiggybaking.co.uk" style="color:inherit;">hello@wiggybaking.co.uk</a><br><a href="mailto:orders@wiggybaking.co.uk" style="color:inherit;">orders@wiggybaking.co.uk</a></div>
+    </div>
+
+    <div class="contact-info-card">
+      <div class="contact-info-icon">🕐</div>
+      <div class="contact-info-label">Business Hours</div>
+      <div class="contact-info-value">
+        <table class="hours-table">
+          <tr><td>Monday – Friday</td><td>8:00am – 6:00pm</td></tr>
+          <tr><td>Saturday</td><td>9:00am – 5:00pm</td></tr>
+          <tr><td>Sunday</td><td class="hours-closed">Closed</td></tr>
+          <tr><td>Bank Holidays</td><td class="hours-closed">Closed</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="contact-info-card">
+      <div class="contact-info-icon">🌐</div>
+      <div class="contact-info-label">Follow Us</div>
+      <div class="contact-socials" style="margin-top:0.8rem;">
+        <a href="#" class="contact-social-link" aria-label="Instagram">📸 Instagram</a>
+        <a href="#" class="contact-social-link" aria-label="Facebook">📘 Facebook</a>
+        <a href="#" class="contact-social-link" aria-label="TikTok">🎵 TikTok</a>
+        <a href="#" class="contact-social-link" aria-label="Pinterest">📌 Pinterest</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="nav-logo-text">Wiggy Baking</span>
+      <p>Handcrafted desserts made with love for every occasion worth celebrating.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">📸</a><a href="#" aria-label="Facebook">📘</a>
+        <a href="#" aria-label="TikTok">🎵</a><a href="#" aria-label="Pinterest">📌</a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="recipes.html">Recipes</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="#">📍 123 Baker Street, London</a></li><li><a href="tel:+441234567890">📞 +44 123 456 7890</a></li><li><a href="mailto:hello@wiggybaking.co.uk">✉️ hello@wiggybaking.co.uk</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© <span id="footer-year"></span> Wiggy Baking. All rights reserved.</p></div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookings — Wiggy Baking</title>
+  <meta name="description" content="Book your Wiggy Baking experience. Check availability and reserve your date for birthdays, weddings, and more.">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/bookings.css">
+</head>
+<body>
+
+<canvas id="sprinkle-canvas"></canvas>
+
+<!-- NAV -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo" aria-label="Wiggy Baking Home">
+      <img src="assets/logo.jpg" alt="Wiggy Baking Logo">
+      <span class="nav-logo-text">Wiggy Baking</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+      <li><a href="recipes.html">Recipes</a></li><li><a href="blog.html">Blog</a></li>
+      <li><a href="bookings.html">Bookings</a></li><li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<nav class="nav-mobile" id="nav-mobile">
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="recipes.html">Recipes</a>
+  <a href="blog.html">Blog</a><a href="bookings.html">Bookings</a><a href="contact.html">Contact Us</a>
+</nav>
+
+<!-- HERO -->
+<header class="page-hero" aria-label="Bookings hero">
+  <div class="page-hero-bg"></div>
+  <h1 class="page-hero-title reveal">Book Your Date</h1>
+  <p class="page-hero-subtitle reveal reveal-delay-1">Reserve your special occasion with Wiggy Baking</p>
+</header>
+
+<!-- BOOKINGS LAYOUT -->
+<div class="bookings-layout">
+
+  <!-- CALENDAR -->
+  <div>
+    <h2 class="section-title reveal" style="text-align:left;margin-bottom:1rem;">Check Availability</h2>
+    <div class="calendar-widget reveal reveal-delay-1">
+      <div class="calendar-header">
+        <button class="cal-nav-btn" id="cal-prev" aria-label="Previous month">‹</button>
+        <span class="calendar-month-title" id="cal-month-title">August 2026</span>
+        <button class="cal-nav-btn" id="cal-next" aria-label="Next month">›</button>
+      </div>
+      <div class="calendar-grid">
+        <div class="calendar-weekdays" aria-hidden="true">
+          <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span>
+          <span>Thu</span><span>Fri</span><span>Sat</span>
+        </div>
+        <div class="calendar-days" id="cal-days" role="grid" aria-label="Calendar"></div>
+      </div>
+      <div class="calendar-legend" aria-label="Calendar legend">
+        <div class="legend-item"><div class="legend-dot available"></div><span>Available</span></div>
+        <div class="legend-item"><div class="legend-dot booked"></div><span>Fully Booked</span></div>
+        <div class="legend-item"><div class="legend-dot today"></div><span>Today</span></div>
+        <div class="legend-item"><div class="legend-dot selected"></div><span>Selected</span></div>
+      </div>
+    </div>
+
+    <!-- Info box -->
+    <div class="reveal reveal-delay-2" style="margin-top:1.5rem;background:#fff;border-radius:var(--radius-md);padding:1.5rem;box-shadow:var(--shadow-sm);border-left:4px solid var(--pink);">
+      <h3 style="font-family:var(--font-cursive);color:var(--red);margin-bottom:0.8rem;font-size:1.1rem;">📋 How It Works</h3>
+      <ol style="padding-left:1.2rem;font-size:0.9rem;color:#5a2a2a;line-height:2;">
+        <li>Select an available date on the calendar</li>
+        <li>Complete the booking form with your details</li>
+        <li>We'll confirm within 24 hours</li>
+        <li>A 25% deposit secures your date</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- BOOKING FORM -->
+  <div>
+    <div class="booking-form-wrap reveal">
+      <h2 class="booking-form-title">📝 Your Booking Details</h2>
+      <form id="booking-form" novalidate>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="booking-name">Full Name *</label>
+            <input type="text" id="booking-name" name="name" required placeholder="Jane Smith">
+          </div>
+          <div class="form-group">
+            <label for="booking-email">Email *</label>
+            <input type="email" id="booking-email" name="email" required placeholder="jane@example.com">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="booking-phone">Phone Number</label>
+            <input type="tel" id="booking-phone" name="phone" placeholder="+44 7700 000000">
+          </div>
+          <div class="form-group">
+            <label for="booking-guests">Number of Guests</label>
+            <input type="number" id="booking-guests" name="guests" min="1" max="1000" placeholder="e.g. 50">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="booking-event">Event Type *</label>
+          <select id="booking-event" name="event" required>
+            <option value="" disabled selected>Select your event type</option>
+            <option value="birthday">🎂 Birthday Party</option>
+            <option value="wedding">💍 Wedding</option>
+            <option value="baby-shower">🍼 Baby Shower</option>
+            <option value="corporate">💼 Corporate Event</option>
+            <option value="anniversary">💕 Anniversary</option>
+            <option value="custom">✨ Custom Celebration</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="booking-desserts">Dessert Requirements</label>
+          <textarea id="booking-desserts" name="desserts" placeholder="e.g. 3-tier vanilla cake for 80 guests, 100 red velvet cupcakes…"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="booking-date">Preferred Date</label>
+          <input type="text" id="booking-date" name="date" placeholder="Select from calendar above or type here" readonly>
+        </div>
+
+        <div class="form-group">
+          <label for="booking-special">Special Requests</label>
+          <textarea id="booking-special" name="special" placeholder="Allergies, dietary requirements, delivery notes, décor preferences…"></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary booking-submit" id="booking-submit-btn">
+          🎉 Submit Booking Request
+        </button>
+      </form>
+
+      <div class="booking-success" role="alert">
+        <h3>🎂 Booking Received!</h3>
+        <p>Thank you for your booking request! Our team will get back to you within 24 hours to confirm your date and discuss the details. We can't wait to make something special for you!</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="nav-logo-text">Wiggy Baking</span>
+      <p>Handcrafted desserts made with love for every occasion worth celebrating.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">📸</a><a href="#" aria-label="Facebook">📘</a>
+        <a href="#" aria-label="TikTok">🎵</a><a href="#" aria-label="Pinterest">📌</a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="recipes.html">Recipes</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="#">📍 123 Baker Street, London</a></li><li><a href="tel:+441234567890">📞 +44 123 456 7890</a></li><li><a href="mailto:hello@wiggybaking.co.uk">✉️ hello@wiggybaking.co.uk</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© <span id="footer-year"></span> Wiggy Baking. All rights reserved.</p></div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/bookings.js"></script>
+</body>
+</html>

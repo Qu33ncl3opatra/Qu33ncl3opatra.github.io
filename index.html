@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wiggy Baking — Home</title>
+  <meta name="description" content="Wiggy Baking — handcrafted cakes, cupcakes, and desserts made with love for every celebration.">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+<!-- Sprinkle Canvas -->
+<canvas id="sprinkle-canvas"></canvas>
+
+<!-- NAVIGATION -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo" aria-label="Wiggy Baking Home">
+      <img src="assets/logo.jpg" alt="Wiggy Baking Logo">
+      <span class="nav-logo-text">Wiggy Baking</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html" id="nav-home">Home</a></li>
+      <li><a href="about.html" id="nav-about">About</a></li>
+      <li><a href="recipes.html" id="nav-recipes">Recipes</a></li>
+      <li><a href="blog.html" id="nav-blog">Blog</a></li>
+      <li><a href="bookings.html" id="nav-bookings">Bookings</a></li>
+      <li><a href="contact.html" id="nav-contact">Contact Us</a></li>
+    </ul>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<nav class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="recipes.html">Recipes</a>
+  <a href="blog.html">Blog</a>
+  <a href="bookings.html">Bookings</a>
+  <a href="contact.html">Contact Us</a>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero" id="hero" aria-label="Hero">
+  <div class="hero-bg" id="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <p class="hero-label">✨ Handcrafted with love</p>
+      <h1 class="hero-title">Welcome to<br><span>Wiggy Baking</span></h1>
+      <p class="hero-sub">Where every slice tells a story. We bake beautiful, delicious desserts for life's sweetest moments — birthdays, weddings, and everything in between.</p>
+      <div class="hero-actions">
+        <a href="bookings.html" class="btn-primary" id="hero-book-btn">🎂 Book an Event</a>
+        <a href="recipes.html" class="btn-secondary" id="hero-recipes-btn">Browse Recipes</a>
+      </div>
+    </div>
+    <div class="hero-logo-wrap">
+      <img src="assets/logo.jpg" alt="Wiggy Baking" id="hero-logo">
+    </div>
+  </div>
+  <div class="hero-scroll-hint" aria-hidden="true">
+    <span>Scroll down</span>
+    <span class="arrow">↓</span>
+  </div>
+</section>
+
+<!-- DESSERT SHOWCASE / CAROUSEL -->
+<section class="showcase" id="showcase" aria-label="Dessert showcase">
+  <div class="showcase-header">
+    <h2 class="section-title reveal">Our Sweet Creations</h2>
+    <div class="section-divider reveal reveal-delay-1"><span>🍰</span></div>
+    <p class="section-subtitle reveal reveal-delay-2">Swipe through our handcrafted dessert gallery</p>
+  </div>
+  <div class="carousel-wrapper">
+    <div class="carousel-track-container" id="carousel-container" aria-label="Dessert gallery">
+      <div class="carousel-track" id="carousel-track">
+
+        <div class="carousel-card">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80" alt="Celebration Cake" loading="lazy">
+          <div class="carousel-card-label">Celebration Cake</div>
+        </div>
+        <div class="carousel-card">
+          <img src="https://images.unsplash.com/photo-1607478900766-efe13248b125?w=600&q=80" alt="Cupcakes" loading="lazy">
+          <div class="carousel-card-label">Gourmet Cupcakes</div>
+        </div>
+        <div class="carousel-card">
+          <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600&q=80" alt="Macarons" loading="lazy">
+          <div class="carousel-card-label">French Macarons</div>
+        </div>
+        <div class="carousel-card">
+          <img src="https://images.unsplash.com/photo-1564355808539-22fda35bed7e?w=600&q=80" alt="Brownies" loading="lazy">
+          <div class="carousel-card-label">Salted Caramel Brownies</div>
+        </div>
+        <div class="carousel-card">
+          <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=600&q=80" alt="Cheesecake" loading="lazy">
+          <div class="carousel-card-label">Strawberry Cheesecake</div>
+        </div>
+        <div class="carousel-card">
+          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80" alt="Pastries" loading="lazy">
+          <div class="carousel-card-label">Artisan Pastries</div>
+        </div>
+        <div class="carousel-card">
+          <img src="https://images.unsplash.com/photo-1506459225024-1428097a7e18?w=600&q=80" alt="Tarts" loading="lazy">
+          <div class="carousel-card-label">Fruit Tarts</div>
+        </div>
+        <div class="carousel-card">
+          <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80" alt="Donuts" loading="lazy">
+          <div class="carousel-card-label">Glazed Donuts</div>
+        </div>
+        <div class="carousel-card">
+          <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=600&q=80" alt="Cookies" loading="lazy">
+          <div class="carousel-card-label">Chocolate Chip Cookies</div>
+        </div>
+        <div class="carousel-card">
+          <img src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=600&q=80" alt="Seasonal" loading="lazy">
+          <div class="carousel-card-label">Seasonal Specials</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="carousel-nav" aria-label="Carousel navigation">
+      <button class="carousel-btn" id="carousel-prev" aria-label="Previous">‹</button>
+      <div class="carousel-dots" role="tablist">
+        <div class="carousel-dot active" role="tab" aria-label="Slide 1"></div>
+        <div class="carousel-dot" role="tab" aria-label="Slide 2"></div>
+        <div class="carousel-dot" role="tab" aria-label="Slide 3"></div>
+        <div class="carousel-dot" role="tab" aria-label="Slide 4"></div>
+        <div class="carousel-dot" role="tab" aria-label="Slide 5"></div>
+      </div>
+      <button class="carousel-btn" id="carousel-next" aria-label="Next">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- STATS SECTION -->
+<section class="stats" id="stats" aria-label="Statistics">
+  <h2 class="section-title reveal">Baked with Love, Loved by Many</h2>
+  <div class="section-divider reveal reveal-delay-1"><span>🧁</span></div>
+  <div class="stats-grid">
+
+    <!-- Cupcake 1 -->
+    <div class="stat-card reveal reveal-delay-1">
+      <div class="stat-cupcake">
+        <svg class="cupcake-svg" viewBox="0 0 120 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Wrapper -->
+          <path d="M35 70 Q30 110 25 120 L95 120 Q90 110 85 70 Z" fill="#FBB5BF" stroke="#910000" stroke-width="2"/>
+          <line x1="35" y1="70" x2="30" y2="120" stroke="#910000" stroke-width="1.5" opacity="0.4"/>
+          <line x1="48" y1="69" x2="46" y2="120" stroke="#910000" stroke-width="1.5" opacity="0.4"/>
+          <line x1="60" y1="69" x2="60" y2="120" stroke="#910000" stroke-width="1.5" opacity="0.4"/>
+          <line x1="72" y1="69" x2="74" y2="120" stroke="#910000" stroke-width="1.5" opacity="0.4"/>
+          <line x1="85" y1="70" x2="90" y2="120" stroke="#910000" stroke-width="1.5" opacity="0.4"/>
+          <!-- Frosting base -->
+          <ellipse cx="60" cy="68" rx="28" ry="10" fill="#F8F6EA"/>
+          <!-- Frosting swirl -->
+          <path d="M40 65 Q45 45 60 40 Q75 45 80 65" fill="#F8F6EA" stroke="#910000" stroke-width="1.5"/>
+          <path d="M47 57 Q52 42 60 38 Q68 42 73 57" fill="#F8F6EA" stroke="#910000" stroke-width="1"/>
+          <path d="M53 50 Q57 38 60 36 Q63 38 67 50" fill="#F8F6EA" stroke="#910000" stroke-width="1"/>
+          <!-- Cherry -->
+          <circle cx="60" cy="33" r="6" fill="#910000"/>
+          <path d="M60 27 Q64 18 68 22" stroke="#228B22" stroke-width="2" fill="none"/>
+          <!-- Sprinkles on wrapper -->
+          <rect x="42" y="85" width="8" height="3" rx="1.5" fill="#910000" transform="rotate(-20 42 85)"/>
+          <rect x="65" y="90" width="8" height="3" rx="1.5" fill="#F8F6EA" transform="rotate(15 65 90)"/>
+          <rect x="55" y="100" width="8" height="3" rx="1.5" fill="#910000" transform="rotate(-5 55 100)"/>
+        </svg>
+      </div>
+      <div class="stat-number" data-count="20000" data-suffix="+">0</div>
+      <div class="stat-label">Orders Fulfilled</div>
+    </div>
+
+    <!-- Cupcake 2 -->
+    <div class="stat-card reveal reveal-delay-2">
+      <div class="stat-cupcake">
+        <svg class="cupcake-svg" viewBox="0 0 120 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M35 70 Q30 110 25 120 L95 120 Q90 110 85 70 Z" fill="#910000" stroke="#FBB5BF" stroke-width="2"/>
+          <line x1="35" y1="70" x2="30" y2="120" stroke="#FBB5BF" stroke-width="1.5" opacity="0.4"/>
+          <line x1="48" y1="69" x2="46" y2="120" stroke="#FBB5BF" stroke-width="1.5" opacity="0.4"/>
+          <line x1="60" y1="69" x2="60" y2="120" stroke="#FBB5BF" stroke-width="1.5" opacity="0.4"/>
+          <line x1="72" y1="69" x2="74" y2="120" stroke="#FBB5BF" stroke-width="1.5" opacity="0.4"/>
+          <line x1="85" y1="70" x2="90" y2="120" stroke="#FBB5BF" stroke-width="1.5" opacity="0.4"/>
+          <ellipse cx="60" cy="68" rx="28" ry="10" fill="#FBB5BF"/>
+          <path d="M40 65 Q45 45 60 40 Q75 45 80 65" fill="#FBB5BF" stroke="#F8F6EA" stroke-width="1.5"/>
+          <path d="M47 57 Q52 42 60 38 Q68 42 73 57" fill="#FBB5BF" stroke="#F8F6EA" stroke-width="1"/>
+          <path d="M53 50 Q57 38 60 36 Q63 38 67 50" fill="#FBB5BF" stroke="#F8F6EA" stroke-width="1"/>
+          <circle cx="60" cy="33" r="6" fill="#F8F6EA"/>
+          <path d="M60 27 Q64 18 68 22" stroke="#228B22" stroke-width="2" fill="none"/>
+          <rect x="42" y="85" width="8" height="3" rx="1.5" fill="#F8F6EA" transform="rotate(-20 42 85)"/>
+          <rect x="65" y="90" width="8" height="3" rx="1.5" fill="#FBB5BF" opacity="0.5" transform="rotate(15 65 90)"/>
+          <rect x="55" y="100" width="8" height="3" rx="1.5" fill="#F8F6EA" transform="rotate(-5 55 100)"/>
+        </svg>
+      </div>
+      <div class="stat-number" data-count="300" data-suffix="+">0</div>
+      <div class="stat-label">Events Catered</div>
+    </div>
+
+    <!-- Cupcake 3 -->
+    <div class="stat-card reveal reveal-delay-3">
+      <div class="stat-cupcake">
+        <svg class="cupcake-svg" viewBox="0 0 120 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M35 70 Q30 110 25 120 L95 120 Q90 110 85 70 Z" fill="#F8F6EA" stroke="#910000" stroke-width="2"/>
+          <line x1="35" y1="70" x2="30" y2="120" stroke="#910000" stroke-width="1.5" opacity="0.4"/>
+          <line x1="48" y1="69" x2="46" y2="120" stroke="#910000" stroke-width="1.5" opacity="0.4"/>
+          <line x1="60" y1="69" x2="60" y2="120" stroke="#910000" stroke-width="1.5" opacity="0.4"/>
+          <line x1="72" y1="69" x2="74" y2="120" stroke="#910000" stroke-width="1.5" opacity="0.4"/>
+          <line x1="85" y1="70" x2="90" y2="120" stroke="#910000" stroke-width="1.5" opacity="0.4"/>
+          <ellipse cx="60" cy="68" rx="28" ry="10" fill="#FBB5BF"/>
+          <path d="M40 65 Q45 45 60 40 Q75 45 80 65" fill="#FBB5BF" stroke="#910000" stroke-width="1.5"/>
+          <path d="M47 57 Q52 42 60 38 Q68 42 73 57" fill="#FBB5BF" stroke="#910000" stroke-width="1"/>
+          <path d="M53 50 Q57 38 60 36 Q63 38 67 50" fill="#FBB5BF" stroke="#910000" stroke-width="1"/>
+          <circle cx="60" cy="33" r="6" fill="#910000"/>
+          <path d="M60 27 Q64 18 68 22" stroke="#228B22" stroke-width="2" fill="none"/>
+          <rect x="42" y="85" width="8" height="3" rx="1.5" fill="#FBB5BF" transform="rotate(-20 42 85)"/>
+          <rect x="65" y="90" width="8" height="3" rx="1.5" fill="#910000" transform="rotate(15 65 90)"/>
+          <rect x="55" y="100" width="8" height="3" rx="1.5" fill="#FBB5BF" transform="rotate(-5 55 100)"/>
+        </svg>
+      </div>
+      <div class="stat-number" data-count="500" data-suffix="+">0</div>
+      <div class="stat-label">Happy Clients</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section style="background: linear-gradient(135deg, var(--red) 0%, #b30000 100%); padding: 4rem 2rem; text-align: center; position: relative; z-index: 2;">
+  <h2 class="reveal" style="font-family: var(--font-cursive); font-size: clamp(1.8rem,4vw,3rem); color: var(--cream); margin-bottom: 1rem;">Ready to Order Something Special?</h2>
+  <p class="reveal reveal-delay-1" style="color: rgba(248,246,234,0.85); font-size: 1.05rem; max-width: 500px; margin: 0 auto 2rem;">Let's create something unforgettable together. Book your consultation today.</p>
+  <a href="bookings.html" class="reveal reveal-delay-2" style="display: inline-flex; background: var(--cream); color: var(--red); font-family: var(--font-cursive); font-size: 1.1rem; font-weight: 700; padding: 0.9rem 2.5rem; border-radius: 99px; transition: var(--transition); box-shadow: 0 4px 20px rgba(0,0,0,0.2);" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.2)'">
+    🎉 Book Your Date
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="nav-logo-text">Wiggy Baking</span>
+      <p>Handcrafted desserts made with love, passion, and the finest ingredients — for every occasion worth celebrating.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">📸</a>
+        <a href="#" aria-label="Facebook">📘</a>
+        <a href="#" aria-label="TikTok">🎵</a>
+        <a href="#" aria-label="Pinterest">📌</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="bookings.html">Bookings</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">Custom Cakes</a></li>
+        <li><a href="#">Event Catering</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#">📍 123 Baker Street, London</a></li>
+        <li><a href="tel:+441234567890">📞 +44 123 456 7890</a></li>
+        <li><a href="mailto:hello@wiggybaking.co.uk">✉️ hello@wiggybaking.co.uk</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span id="footer-year"></span> Wiggy Baking. All rights reserved. Made with 🎂 and love.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
