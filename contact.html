@@ -35,7 +35,7 @@
 
 <!-- HERO -->
 <header class="page-hero" aria-label="Contact hero">
-  <div class="page-hero-bg"></div>
+  <div class="page-hero-bg" style="background: linear-gradient(135deg, rgba(145,0,0,0.85) 0%, rgba(197,48,48,0.85) 50%, rgba(123,0,0,0.85) 100%), url('https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=1200&q=80') center/cover;"></div>
   <h1 class="page-hero-title reveal">Get in Touch</h1>
   <p class="page-hero-subtitle reveal reveal-delay-1">We'd love to hear from you — let's create something sweet together</p>
 </header>
@@ -71,7 +71,7 @@
       <circle cx="200" cy="68" r="10" fill="#F8F6EA" opacity="0.4"/>
     </svg>
     <h3>Visit Our Bakery</h3>
-    <p>Open Monday to Saturday · 123 Baker Street, London · Just 2 minutes from the tube</p>
+    <p>Open Monday to Saturday · Rua dos Pastéis 123, Lisboa · Just 2 minutes from the metro</p>
   </div>
 </div>
 
@@ -114,13 +114,13 @@
     <div class="contact-info-card">
       <div class="contact-info-icon">📍</div>
       <div class="contact-info-label">Our Address</div>
-      <div class="contact-info-value">123 Baker Street<br>London, W1U 6TY<br>United Kingdom</div>
+      <div class="contact-info-value">Rua dos Pastéis 123<br>Lisboa, 1000-001<br>Portugal</div>
     </div>
 
     <div class="contact-info-card">
       <div class="contact-info-icon">📞</div>
       <div class="contact-info-label">Phone</div>
-      <div class="contact-info-value"><a href="tel:+441234567890" style="color:inherit;">+44 123 456 7890</a></div>
+      <div class="contact-info-value"><a href="tel:+351123456789" style="color:inherit;">+351 123 456 789</a></div>
     </div>
 
     <div class="contact-info-card">
@@ -129,27 +129,29 @@
       <div class="contact-info-value"><a href="mailto:hello@wiggybaking.co.uk" style="color:inherit;">hello@wiggybaking.co.uk</a><br><a href="mailto:orders@wiggybaking.co.uk" style="color:inherit;">orders@wiggybaking.co.uk</a></div>
     </div>
 
-    <div class="contact-info-card">
-      <div class="contact-info-icon">🕐</div>
-      <div class="contact-info-label">Business Hours</div>
-      <div class="contact-info-value">
-        <table class="hours-table">
-          <tr><td>Monday – Friday</td><td>8:00am – 6:00pm</td></tr>
-          <tr><td>Saturday</td><td>9:00am – 5:00pm</td></tr>
-          <tr><td>Sunday</td><td class="hours-closed">Closed</td></tr>
-          <tr><td>Bank Holidays</td><td class="hours-closed">Closed</td></tr>
-        </table>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+      <div class="contact-info-card">
+        <div class="contact-info-icon">🕐</div>
+        <div class="contact-info-label">Business Hours</div>
+        <div class="contact-info-value">
+          <table class="hours-table">
+            <tr><td>Monday – Friday</td><td>8:00am – 6:00pm</td></tr>
+            <tr><td>Saturday</td><td>9:00am – 5:00pm</td></tr>
+            <tr><td>Sunday</td><td class="hours-closed">Closed</td></tr>
+            <tr><td>Bank Holidays</td><td class="hours-closed">Closed</td></tr>
+          </table>
+        </div>
       </div>
-    </div>
 
-    <div class="contact-info-card">
-      <div class="contact-info-icon">🌐</div>
-      <div class="contact-info-label">Follow Us</div>
-      <div class="contact-socials" style="margin-top:0.8rem;">
-        <a href="#" class="contact-social-link" aria-label="Instagram">📸 Instagram</a>
-        <a href="#" class="contact-social-link" aria-label="Facebook">📘 Facebook</a>
-        <a href="#" class="contact-social-link" aria-label="TikTok">🎵 TikTok</a>
-        <a href="#" class="contact-social-link" aria-label="Pinterest">📌 Pinterest</a>
+      <div class="contact-info-card">
+        <div class="contact-info-icon">🌐</div>
+        <div class="contact-info-label">Follow Us</div>
+        <div class="contact-socials" style="margin-top:0.8rem;">
+          <a href="#" class="contact-social-link" aria-label="Instagram">📸 Instagram</a>
+          <a href="#" class="contact-social-link" aria-label="Facebook">📘 Facebook</a>
+          <a href="#" class="contact-social-link" aria-label="TikTok">🎵 TikTok</a>
+          <a href="#" class="contact-social-link" aria-label="Pinterest">📌 Pinterest</a>
+        </div>
       </div>
     </div>
 
@@ -168,10 +170,13 @@
       </div>
     </div>
     <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="recipes.html">Recipes</a></li><li><a href="blog.html">Blog</a></li></ul></div>
-    <div class="footer-col"><h4>Contact</h4><ul><li><a href="#">📍 123 Baker Street, London</a></li><li><a href="tel:+441234567890">📞 +44 123 456 7890</a></li><li><a href="mailto:hello@wiggybaking.co.uk">✉️ hello@wiggybaking.co.uk</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="#">📍 Rua dos Pastéis 123, Lisboa</a></li><li><a href="tel:+351123456789">📞 +351 123 456 789</a></li><li><a href="mailto:hello@wiggybaking.co.uk">✉️ hello@wiggybaking.co.uk</a></li></ul></div>
   </div>
   <div class="footer-bottom"><p>© <span id="footer-year"></span> Wiggy Baking. All rights reserved.</p></div>
 </footer>
+
+<!-- BACK TO TOP BUTTON -->
+<button id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
 
 <script src="js/main.js"></script>
 <script src="js/contact.js"></script>
